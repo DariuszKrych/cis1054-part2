@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dish Details</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', sans-serif;
+      background-color: #fffdf6;
+      color: #333;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    .dish {
+      margin-bottom: 20px;
+    }
+
+    .dish-name {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .dish-description {
+      margin-left: 15px;
+      font-style: italic;
+      color: #555;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 30px 0;
+    }
+
+    /* Floating button style */
+    .flip-button {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      background-color: #f55252;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    .flip-button:hover {
+      background-color: #c0392b;
+    }
+
+    .flipped {
+    transform: scaleX(-1) translateY(-50%);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Dish Details</h1>
+
+  <h2>Appetizers</h2>
+  <div class="dish">
+    <div class="dish-name">Bruschetta</div>
+    <div class="dish-description">Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Prosciutto e Melone</div>
+    <div class="dish-description">Sweet melon slices served with thinly sliced cured ham.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Calamari Fritti</div>
+    <div class="dish-description">Lightly battered and fried squid rings served with lemon or marinara sauce.</div>
+  </div>
+  <hr>
+
+  <h2>First Courses</h2>
+  <div class="dish">
+    <div class="dish-name">Spaghetti Carbonara</div>
+    <div class="dish-description">Spaghetti with eggs, cheese, pancetta, and black pepper.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Lasagna alla Bolognese</div>
+    <div class="dish-description">Layered pasta with meat sauce, béchamel, and cheese, baked until golden.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Fettucine Alfredo</div>
+    <div class="dish-description">Fettuccine pasta tossed in a creamy parmesan butter sauce.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Risotto ai Funghi</div>
+    <div class="dish-description">Creamy Arborio rice cooked with mushrooms and broth.</div>
+  </div>
+  <hr>
+
+  <h2>Main Courses</h2>
+  <div class="dish">
+    <div class="dish-name">Pollo alla Parmigiana</div>
+    <div class="dish-description">Breaded chicken breast topped with tomato sauce and melted cheese.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Branzino al Forno</div>
+    <div class="dish-description">Whole sea bass baked with herbs, lemon, and olive oil.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Eggplant Parmigiana</div>
+    <div class="dish-description">Baked eggplant slices layered with tomato sauce and cheese.</div>
+  </div>
+  <hr>
+
+  <h2>Side Dishes</h2>
+  <div class="dish">
+    <div class="dish-name">Roasted Rosemary Potatoes</div>
+    <div class="dish-description">Golden roasted potatoes seasoned with rosemary and garlic.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Grilled Vegetables</div>
+    <div class="dish-description">Seasonal vegetables grilled and drizzled with olive oil.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Caponata</div>
+    <div class="dish-description">Sweet and sour eggplant dish with olives, capers, and tomatoes.</div>
+  </div>
+  <hr>
+
+  <h2>Dolci</h2>
+  <div class="dish">
+    <div class="dish-name">Tiramisu</div>
+    <div class="dish-description">Coffee-soaked ladyfingers layered with mascarpone cream and cocoa.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Cannoli</div>
+    <div class="dish-description">Crispy pastry tubes filled with sweet ricotta cream.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Panna Cotta</div>
+    <div class="dish-description">Silky cream dessert often served with berries or caramel sauce.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Gelato Assortito</div>
+    <div class="dish-description">Selection of traditional Italian-style ice creams.</div>
+  </div>
+  <hr>
+
+  <h2>Bevande</h2>
+  <div class="dish">
+    <div class="dish-name">Espresso</div>
+    <div class="dish-description">Strong Italian coffee served in a small cup.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Cappuccino</div>
+    <div class="dish-description">Espresso with steamed milk and a frothy top.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Coca</div>
+    <div class="dish-description">Classic Coca-Cola.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Sprite</div>
+    <div class="dish-description">Lemon-lime flavored soda.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Water</div>
+    <div class="dish-description">Still or sparkling mineral water.</div>
+  </div>
+  <div class="dish">
+    <div class="dish-name">Prosecco</div>
+    <div class="dish-description">Italian sparkling white wine, often served chilled.</div>
+  </div>
+
+  <!-- Floating button to go back to list -->
+ <button class="flip-button flipped" onclick="window.location.href='listdishes.html'">
+  ➤
+</button>
+</body>
+</html>
