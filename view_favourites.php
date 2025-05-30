@@ -90,6 +90,7 @@
     <h1>My Favourite Dishes</h1>
 
     <?php
+    //This part handles the loading of any favourite dishes from favourites.csv into an array
     $filename = "favourites.csv";
     $favourites = [];
 
@@ -97,24 +98,25 @@
         $favourites = file($filename, FILE_IGNORE_NEW_LINES);
     }
 
-    // Handle email sending
+    //Checks if the user submitted the email
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["send_email"])) {
+        //Prepares the email with favourite dishes
         $to = $_POST["email"];
         $subject = "Your Favourite Dishes";
         $body = "Here are your selected favourite dishes:\n\n";
         $body .= implode("\n", $favourites);
         $headers = "From: no-reply@restaurant.com";
-
+        //Send email using mail() function
+        //In the case the email isnt sent it sends an error
         if (mail($to, $subject, $body, $headers)) {
             echo "<p style='color: green;'>Email sent successfully to $to!</p>";
         } else {
-            echo "<p style='color: red;'>Failed to send email. Showing simulated message instead:</p>";
-            echo "<pre>$body</pre>";
+            echo "<p style='color: red;'>Failed to send email.</p>";
         }
     }
-
-    // Handle dish removal
+    //Here the program checks if a request to remove the dish from favourites was sent
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["remove_dish"])) {
+        //Removes the selected dish from the favourites.csv file
         $dishToRemove = $_POST["remove_dish"];
         $favourites = file($filename, FILE_IGNORE_NEW_LINES);
         $favourites = array_filter($favourites, fn($dish) => $dish !== $dishToRemove);
@@ -123,9 +125,10 @@
         exit();
     }
     ?>
-
+    
     <div class="favourites-container">
         <?php
+        //Check if the favourites list is not empty
         if (!empty($favourites)) {
             foreach ($favourites as $dish) {
                 echo "<div class='favourite-card'>
@@ -142,7 +145,9 @@
         ?>
     </div>
 
+    
     <?php if (!empty($favourites)): ?>
+        
         <form method="POST" class="email-form">
             <h2>Send Your Favourite Dishes</h2>
             <label for="email">Enter your email address:</label><br><br>
