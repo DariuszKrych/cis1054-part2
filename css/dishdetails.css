@@ -1,0 +1,40 @@
+.dish {
+  margin-bottom: 20px;
+}
+
+.dish-name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.dish-description {
+  margin-left: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+.add-form {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.add-form button {
+  background-color: #f4b400;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.add-form button:hover {
+  background-color: #e0a800;
+}
+
+.flip-button {
+  left: 20px;
+  position: fixed;
+  top: 50%;
+  transform: rotate(180deg);
+}

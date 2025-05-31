@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Main Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <img class="general_img" src="assets/Restaurant_Img.jpg">
 
+        <section>
+            <h2>La Tavola Italiana</h2>
+            <p><strong>Our Restaurant</strong> is a family-run restaurant located in the heart of Valletta, Malta. We offer authentic Italian cuisine in a warm and welcoming environment.
+            We pride ourselves in bringing a fantastic homely meal to the table. A restaurant with a homely soul.</p>
+            <p><strong>Address:</strong> 123 Mediterranean Street, Valletta, Malta</p>
+            <p><strong>Opening Hours:</strong><br>
+            Monday – Friday: 11:00 AM – 10:00 PM<br>
+            Saturday – Sunday: 02:00 PM – 11:00 PM</p>
+        </section>
+
+        <section>
+            <h2>Meet the Team</h2>
+            <p><strong>Chef Mario Rossi</strong> leads our kitchen with over 20 years of culinary experience from Florence. He specializes in traditional pasta and fresh seafood dishes.</p>
+            <p><strong>Sofia Grech</strong>, our manager, ensures every guest feels at home. Her passion for hospitality is what keeps customers coming back.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="php/contact.php" method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="booking">Table Booking</option>
+                        <option value="query">General Query</option>
+                        <option value="complaint">Complaint</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        
+
+        <div class="flip-button-container">
+            <button id="btn_bottom" class="flip-button right" onclick="window.location.href='listdishes.html'" data-label="Menu">
+                ➤
+            </button>
+            <button id="btn_top" class="flip-button right" onclick="window.location.href='dishdetails.html'" data-label="Dish Details">
+                ➤➤
+            </button>
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>

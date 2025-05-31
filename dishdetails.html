@@ -1,95 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Detailed Menu</title>
-  <style>
-    body {
-      font-family: 'Times New Roman', sans-serif;
-      background-color: #fdf7e3;
-      color: #333;
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-
-    .dish {
-      margin-bottom: 20px;
-    }
-
-    .dish-name {
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .dish-description {
-      margin-left: 15px;
-      font-style: italic;
-      color: #555;
-    }
-
-    .add-form {
-      margin-left: 15px;
-      margin-top: 5px;
-    }
-
-    .add-form button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 0.9em;
-    }
-
-    .add-form button:hover {
-      background-color: #388e3c;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 30px 0;
-    }
-
-    .flip-button {
-      position: fixed;
-      top: 50%;
-      left: 20px;
-      background-color: #f55252;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-      z-index: 1000;
-    }
-
-    .flip-button:hover {
-      background-color: #c0392b;
-    }
-
-    .flipped {
-      transform: scaleX(-1) translateY(-50%);
-    }
-  </style>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/x-icon" href="images/pkFavicon.png">
+        <title>Menu</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/dishdetails.css">
+    </head>
 <body>
+  <img class="rest_img" src="assets/Food_Img.jpg">
   <h1>Dish Details</h1>
 
   <!-- Category Sections Start -->
@@ -97,7 +19,7 @@
   <div class="dish">
     <div class="dish-name">Bruschetta</div>
     <div class="dish-description">Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.</div>
-    <form class="add-form" method="POST" action="add_to_favourites.php">
+    <form class="add-form" method="POST" action="./php/add_to_favourites.php">
       <input type="hidden" name="dish" value="Bruschetta">
       <button type="submit">Add to Favourites</button>
     </form>
@@ -106,7 +28,7 @@
   <div class="dish">
     <div class="dish-name">Prosciutto e Melone</div>
     <div class="dish-description">Sweet melon slices served with thinly sliced cured ham.</div>
-    <form class="add-form" method="POST" action="add_to_favourites.php">
+    <form class="add-form" method="POST" action="./php/add_to_favourites.php">
       <input type="hidden" name="dish" value="Prosciutto e Melone">
       <button type="submit">Add to Favourites</button>
     </form>
@@ -115,7 +37,7 @@
   <div class="dish">
     <div class="dish-name">Calamari Fritti</div>
     <div class="dish-description">Lightly battered and fried squid rings served with lemon or marinara sauce.</div>
-    <form class="add-form" method="POST" action="add_to_favourites.php">
+    <form class="add-form" method="POST" action="php/add_to_favourites.php">
       <input type="hidden" name="dish" value="Calamari Fritti">
       <button type="submit">Add to Favourites</button>
     </form>
@@ -123,40 +45,46 @@
   <hr>
 
   <h2>First Courses</h2>
-  <div class="dish"><div class="dish-name">Spaghetti Carbonara</div><div class="dish-description">Spaghetti with eggs, cheese, pancetta, and black pepper.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Spaghetti Carbonara"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Lasagna alla Bolognese</div><div class="dish-description">Layered pasta with meat sauce, béchamel, and cheese, baked until golden.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Lasagna alla Bolognese"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Fettucine Alfredo</div><div class="dish-description">Fettuccine pasta tossed in a creamy parmesan butter sauce.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Fettucine Alfredo"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Risotto ai Funghi</div><div class="dish-description">Creamy Arborio rice cooked with mushrooms and broth.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Risotto ai Funghi"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Spaghetti Carbonara</div><div class="dish-description">Spaghetti with eggs, cheese, pancetta, and black pepper.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Spaghetti Carbonara"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Lasagna alla Bolognese</div><div class="dish-description">Layered pasta with meat sauce, béchamel, and cheese, baked until golden.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Lasagna alla Bolognese"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Fettucine Alfredo</div><div class="dish-description">Fettuccine pasta tossed in a creamy parmesan butter sauce.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Fettucine Alfredo"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Risotto ai Funghi</div><div class="dish-description">Creamy Arborio rice cooked with mushrooms and broth.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Risotto ai Funghi"><button type="submit">Add to Favourites</button></form></div>
   <hr>
 
   <h2>Main Courses</h2>
-  <div class="dish"><div class="dish-name">Pollo alla Parmigiana</div><div class="dish-description">Breaded chicken breast topped with tomato sauce and melted cheese.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Pollo alla Parmigiana"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Branzino al Forno</div><div class="dish-description">Whole sea bass baked with herbs, lemon, and olive oil.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Branzino al Forno"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Eggplant Parmigiana</div><div class="dish-description">Baked eggplant slices layered with tomato sauce and cheese.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Eggplant Parmigiana"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Pollo alla Parmigiana</div><div class="dish-description">Breaded chicken breast topped with tomato sauce and melted cheese.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Pollo alla Parmigiana"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Branzino al Forno</div><div class="dish-description">Whole sea bass baked with herbs, lemon, and olive oil.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Branzino al Forno"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Eggplant Parmigiana</div><div class="dish-description">Baked eggplant slices layered with tomato sauce and cheese.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Eggplant Parmigiana"><button type="submit">Add to Favourites</button></form></div>
   <hr>
 
   <h2>Side Dishes</h2>
-  <div class="dish"><div class="dish-name">Roasted Rosemary Potatoes</div><div class="dish-description">Golden roasted potatoes seasoned with rosemary and garlic.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Roasted Rosemary Potatoes"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Grilled Vegetables</div><div class="dish-description">Seasonal vegetables grilled and drizzled with olive oil.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Grilled Vegetables"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Caponata</div><div class="dish-description">Sweet and sour eggplant dish with olives, capers, and tomatoes.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Caponata"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Roasted Rosemary Potatoes</div><div class="dish-description">Golden roasted potatoes seasoned with rosemary and garlic.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Roasted Rosemary Potatoes"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Grilled Vegetables</div><div class="dish-description">Seasonal vegetables grilled and drizzled with olive oil.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Grilled Vegetables"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Caponata</div><div class="dish-description">Sweet and sour eggplant dish with olives, capers, and tomatoes.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Caponata"><button type="submit">Add to Favourites</button></form></div>
   <hr>
 
   <h2>Dolci</h2>
-  <div class="dish"><div class="dish-name">Tiramisu</div><div class="dish-description">Coffee-soaked ladyfingers layered with mascarpone cream and cocoa.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Tiramisu"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Cannoli</div><div class="dish-description">Crispy pastry tubes filled with sweet ricotta cream.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Cannoli"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Panna Cotta</div><div class="dish-description">Silky cream dessert often served with berries or caramel sauce.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Panna Cotta"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Gelato Assortito</div><div class="dish-description">Selection of traditional Italian-style ice creams.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Gelato Assortito"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Tiramisu</div><div class="dish-description">Coffee-soaked ladyfingers layered with mascarpone cream and cocoa.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Tiramisu"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Cannoli</div><div class="dish-description">Crispy pastry tubes filled with sweet ricotta cream.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Cannoli"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Panna Cotta</div><div class="dish-description">Silky cream dessert often served with berries or caramel sauce.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Panna Cotta"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Gelato Assortito</div><div class="dish-description">Selection of traditional Italian-style ice creams.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Gelato Assortito"><button type="submit">Add to Favourites</button></form></div>
   <hr>
 
   <h2>Bevande</h2>
-  <div class="dish"><div class="dish-name">Espresso</div><div class="dish-description">Strong Italian coffee served in a small cup.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Espresso"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Cappuccino</div><div class="dish-description">Espresso with steamed milk and a frothy top.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Cappuccino"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Coca</div><div class="dish-description">Classic Coca-Cola.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Coca"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Sprite</div><div class="dish-description">Lemon-lime flavored soda.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Sprite"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Water</div><div class="dish-description">Still or sparkling mineral water.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Water"><button type="submit">Add to Favourites</button></form></div>
-  <div class="dish"><div class="dish-name">Prosecco</div><div class="dish-description">Italian sparkling white wine, often served chilled.</div><form class="add-form" method="POST" action="add_to_favourites.php"><input type="hidden" name="dish" value="Prosecco"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Espresso</div><div class="dish-description">Strong Italian coffee served in a small cup.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Espresso"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Cappuccino</div><div class="dish-description">Espresso with steamed milk and a frothy top.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Cappuccino"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Coca</div><div class="dish-description">Classic Coca-Cola.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Coca"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Sprite</div><div class="dish-description">Lemon-lime flavored soda.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Sprite"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Water</div><div class="dish-description">Still or sparkling mineral water.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Water"><button type="submit">Add to Favourites</button></form></div>
+  <div class="dish"><div class="dish-name">Prosecco</div><div class="dish-description">Italian sparkling white wine, often served chilled.</div><form class="add-form" method="POST" action="php/add_to_favourites.php"><input type="hidden" name="dish" value="Prosecco"><button type="submit">Add to Favourites</button></form></div>
 
-  <!-- Floating Back Button -->
-  <button class="flip-button flipped" onclick="window.location.href='listdishes.html'">➤</button>
+<div class="flip-button-container flip-button-left">
+    <button id="btn_top" class="flip-button left" onclick="window.location.href='index.html'" data-label="Home">
+        ➤➤
+    </button>
+    <button id="btn_bottom" class="flip-button left" onclick="window.location.href='listdishes.html'" data-label="Menu">
+        ➤
+    </button>
+</div>
 </body>
 </html>

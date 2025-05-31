@@ -1,0 +1,32 @@
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.flip-button {
+    position: fixed;
+    top: 50%;
+}
+
+.favourites-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f4b400;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#btn_2_index{
+    left: 20px;
+    transform: rotate(180deg);
+}
+
+#btn_2_details{
+    right:20px;
+}

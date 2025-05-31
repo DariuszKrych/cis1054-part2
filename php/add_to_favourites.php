@@ -34,7 +34,7 @@ ob_start();
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["dish"])) {
     $dish = htmlspecialchars(strip_tags($_POST["dish"]));
-    $file = 'favourites.csv';
+    $file = '../data/favourites.csv';
     $alreadyExists = false;
 
     // Read existing favourites
@@ -57,14 +57,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["dish"])) {
             fclose($handle);
             echo "<p>Added to favourites: <strong>$dish</strong></p>";
         } else {
-            echo "<p>Could not open file for writing.</p>";
+            // Add error details for debugging
+            echo "<p>Could not open file for writing. File: " . $file . "</p>";
+            echo "<p>Error: " . error_get_last()['message'] . "</p>";
         }
     }
 } else {
     echo "<p>No dish received or invalid method.</p>";
 }
 ?>
-  <p><a href="dishdetails.html">⬅ Back to Menu</a></p>
+  <p><a href="../dishdetails.html">⬅ Back to Menu</a></p>
 </body>
 </html>
 

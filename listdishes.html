@@ -1,104 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Menu</title>
-  <style>
-    body 
-    {
-        
-        font-family: 'Times New Roman', sans-serif;
-        background-color: #fdf7e3;
-        color: #333;
-        padding: 40px;
-        max-width: 800px;
-        margin: auto;
-    }
-    h1 
-    {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    h2 
-    {
-        padding-bottom: 5px;
-        margin-top: 30px;
-    }
-
-    ul 
-    {
-        list-style: none;
-        padding-left: 0;
-    }
-    
-    li 
-    {
-        padding: 5px 0;
-    }
-    
-    hr 
-    {
-        border: none;
-        border-top: 1px solid #ccc;
-        margin: 30px 0;
-    }
-
-    .flip-button 
-    {
-        position: fixed;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        background-color: #f55252;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        transition: background-color 0.3s ease;
-        z-index: 1000;
-    }
-
-    .flip-button:hover 
-    {
-        background-color: #c0392b;
-    }
-    .favourites-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f4b400;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-  </style>
-
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/x-icon" href="images/pkFavicon.png">
+        <title>Menu</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/listdishes.css">
+    </head>
 <body>
-  <a href="view_favourites.php" class="favourites-button">View My Favourite Dishes</a>
+  <a href="./php/view_favourites.php" class="favourites-button">View My Favourite Dishes</a>
 
-  <section>
-  <h2>About Our Restaurant</h2>
-  <p><strong>La Tavola Italiana</strong> is a family-run restaurant located in the heart of Valletta, Malta. We pride ourselves on offering authentic Italian cuisine in a warm and welcoming environment.</p>
-  <p><strong>Address:</strong> 123 Mediterranean Street, Valletta, Malta</p>
-  <p><strong>Opening Hours:</strong><br>
-     Monday – Friday: 11:00 AM – 10:00 PM<br>
-     Saturday – Sunday: 12:00 PM – 11:00 PM</p>
-</section>
-
-  <section>
-  <h2>Meet the Team</h2>
-  <p><strong>Chef Mario Rossi</strong> leads our kitchen with over 20 years of culinary experience from Florence. He specializes in traditional pasta and fresh seafood dishes.</p>
-  <p><strong>Sofia Grech</strong>, our manager, ensures every guest feels at home. Her passion for hospitality is what keeps customers coming back.</p>
-</section>
-
-
+  <img class="fav_img" src="assets/favourite_Img.png">
   <h1>Menu</h1>
 
   <h2>Appetizers</h2>
@@ -153,9 +68,13 @@
     <li>Prosecco</li>
   </ul>
 
-  <!-- Floating button to go to details page -->
-  <button class="flip-button" onclick="window.location.href='dishdetails.html'">
-    ➤
-  </button>
+    <div class="flip-button-container">
+      <button id="btn_2_index" class="flip-button left" onclick="window.location.href='index.html'" data-label="Home">
+        ➤
+      </button>
+      <button id="btn_2_details" class="flip-button right" onclick="window.location.href='dishdetails.html'" data-label="Dish Details">
+        ➤
+      </button>
+    </div>  
 </body>
 </html>

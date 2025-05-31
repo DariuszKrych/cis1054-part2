@@ -1,0 +1,172 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #fdf7e3; 
+    color: #333;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto; 
+    text-align: center; 
+}
+
+hr {
+    border: none;
+
+    border-top: 1px solid #a5d6a7; 
+    margin: 30px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    padding-bottom: 5px;
+    margin-top: 30px;
+
+}
+
+
+section {
+    margin-bottom: 30px;
+}
+
+.flip-button:hover
+{
+    background-color: #388E3C; 
+}
+
+----------
+
+.flip-button-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+
+}
+
+.flip-button {
+
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    position: fixed;
+}
+
+.flip-button::after {
+    content: attr(data-label);
+    position: absolute;
+    white-space: nowrap;
+    font-size: 14px;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.flip-button:hover::after {
+    opacity: 1;
+}
+
+.flip-button.right::after {
+    right: 15%;
+    bottom: 100%;
+    margin-left: 10px;
+}
+
+.flip-button.left::after {
+    left: +12%;
+    top: 100%;
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
+
+
+#btn_bottom{
+    right: 20px;
+    top: 45%;
+}
+
+#btn_top{
+    right:20px;
+    top:55%;
+}
+
+.general_img{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: min(900px, 80%);
+    border-radius: 5%;
+    border: 5px solid #388E3C; 
+    padding: 10px;
+    background-clip: content-box;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.fav_img {
+    width: min(400px, 40%); 
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; 
+    border-radius: 5%;
+    border: 5px solid #f4b400; 
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.rest_img {
+        width: min(500px, 50%); 
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; 
+    border-radius: 5%;
+    border: 5px solid #388E3C;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form div {
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    margin-right: 10px;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #388E3C;
+}
